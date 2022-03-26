@@ -1,7 +1,8 @@
 @import url("normalize.css");
 
 :root {
-    --primaryDefault: hsl(0, 100%, 48%)
+    --primaryDefault: hsla(0, 100%, 48%, 1);
+    --lightBackground: hsla(0, 0%, 100%, 0.55);
 }
 
 @font-face {
@@ -22,6 +23,8 @@ body {
     font-size: 1em;
     font-family: Helvetica, sans-serif;
 }
+
+/******** Navbar Content *********/
 
 .navbar {
     width: 100%;
@@ -109,11 +112,58 @@ body {
 
 .navbar .logo .brand {
     color: #FFFFFF;
-    font-family: 'cocacola';
+    font-family: 'cocacola', cursive;
     font-size: 2.5rem;
 }
 
+/******** Header Content ********/
+
+.brandHeader {
+    background-image: url("../assets/images/main_3D.jpg");
+    height: 600px;
+    width: 90%;
+    margin: 1em auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto auto auto 5em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    background-color: var(--lightBackground);
+    padding: 1em;
+}
+
+.headerContent h1 {
+    margin: 0;
+}
+
+.headerContent h3 {
+    color: #3ac7d5;
+}
+
+
+
+/******** Media Queries *********/
+
 @media screen and (max-width: 48em) {
+    
+    body {
+        font-size: 0.8em;
+    }
     
     .navbar {
         flex-direction: column;
@@ -161,5 +211,14 @@ body {
     .dropdownMenu ul li a {
         width: 100%;
     }
-        
+    
+    .brandHeader {
+        height: 300px;
+        width: 98%;
+    }
+    
+    .headerContent {
+        width: 100%;
+        margin: 0;
+    }
 }
