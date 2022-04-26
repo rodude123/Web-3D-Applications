@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coca-Cola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ed3c25598e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+            <span>
+                <a href="/" class="brand">1oca Cola</a> Journey
+            </span>
+        <a href="#" class="icon" id="burger"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul id="navLinks">
+        <li><a href="#" class="navLink" id="homePg">Home</a></li>
+        <li><a href="#" class="navLink">About</a></li>
+        <li><a href="#" class="navLink" id="drinksMenu">Drinks</a>
+            <div class="dropdownMenu">
+                <ul>
+                    <li><a href="#" id="cocaColaPg">Coca-Cola</a></li>
+                    <li><a href="#" id="fantaPg">fanta</a></li>
+                    <li><a href="#" id="costaPg">Costa</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#" class="navLink">Contact</a></li>
+    </ul>
+</nav>
+<div id="home" class="hidePg">
+    <header class="brandHeader">
+        <div class="headerContent">
+            <h1>Coca Cola Great Britain</h1>
+            <h3>Founded by Dr John S Pemberton</h3>
+            <p>The Coca Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic
+                beverage
+                concentrates and syrups and produces nearly 400 brand.</p>
+        </div>
+    </header>
+    <main>
+        <div class="drinksContainer">
+            <div class="card">
+                <img src="assets/images/coca_cola.jpg" alt="Coca-Cola logo">
+                <div class="cardBody">
+                    <h3>Coca Cola</h3>
+                    <p>On May 8, 1886, Dr. John Pemberton sold the first glass of Coca-Cola at Jacobs' Pharmacy in
+                        downtown
+                        Atlanta. Serving nine drinks per day in its first year, Coca-Cola was new refreshment in its
+                        beginning. See the story here of how it all began.
+                        The product that has given the world its best-known taste was born in Atlanta, Georgia, on May
+                        8,
+                        1886. Dr. John Stith Pemberton, a local pharmacist, produced the syrup for Coca-Cola, and
+                        carried a
+                        jug of the new product down the street to Jacobs' Pharmacy, where it was sampled, pronounced
+                        "excellent" and placed on sale for five cents a glass as a soda fountain drink. Carbonated water
+                        was
+                        teamed with the new syrup to produce a drink that was at once "Delicious and Refreshing," a
+                        theme
+                        that continues to echo today wherever Coca-Cola is enjoyed.</p>
+                    <a href="" class="btn btnPrimary">Find out more...</a></div>
+            </div>
+            <div class="card">
+                <img src="assets/images/fanta.jpg" alt="Fanta Logo">
+                <div class="cardBody">
+                    <h3>Fanta</h3>
+                    <p>So let’s start this story at the beginning. Fanta traces its origins back to World War II. At the
+                        time, the Coca-Cola business in Germany was one of the world’s most successful, second only to
+                        the
+                        company’s sales in the United States. The modern version of Fanta. The Fanta we know now was
+                        born in
+                        Naples, Italy, where in 1955 Coca-Cola began using local citrus to formulate the now famous
+                        orange
+                        flavour.
+                        Bright, bubbly and popular, Fanta is the soft drink that intensifies fun. Introduced in 1940,
+                        Fanta
+                        is the second oldest brand of The Coca-Cola Company.</p>
+                    <a href="" class="btn btnPrimary">Find out more...</a></div>
+            </div>
+            <div class="card">
+                <img src="assets/images/costa.jpg" alt="">
+                <div class="cardBody">
+                    <h3>Costa Coffee</h3>
+                    <p>As the Nation's Favourite Coffee Shop, we are committed to supporting our customers, communities
+                        and
+                        people. Following the latest Government guidance, we’ve made changes to how we serve our coffee,
+                        introducing social distancing and enhancing our hygiene procedures to keep our store teams and
+                        customers safe.
+                        Served in London since 1971, Costa Coffee's signature blend is the perfect balance of delicate
+                        Arabica and strong Robusta beans, slow-roasted for a smooth and nutty flavour and rich aroma.
+                        Now
+                        you can experience it in a can on the go.</p>
+                    <a href="" class="btn btnPrimary">Find out more...</a></div>
+            </div>
+        </div>
+    </main>
+</div>
+<div id="fanta" class="showPg">
+    <div class="drinkContent">
+        <div class="slideshowContainer">
+            <div class="mySlides fade">
+                <div class="numberText">1 / 3</div>
+                <img src="./assets/images/coca_cola.jpg" alt="Coca-Cola">
+                <div class="text">Coca Cola</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numberText">2 / 3</div>
+                <img src="./assets/images/costa.jpg" alt="Costa">
+                <div class="text">Costa</div>
+            </div>
+            <div class="mySlides fade">
+                <div class="numberText">3 / 3</div>
+                <img src="./assets/images/fanta.jpg" alt="Fanta">
+                <div class="text">Fanta</div>
+            </div>
+            <a class="prev" id="prevSlide">&#10094;</a>
+            <a class="next" id="nextSlide">&#10095;</a>
+        </div>
+        <div class="cameraViews">
+            <button class="contentButton">Center</button>
+            <button class="contentButton">Left</button>
+            <button class="contentButton">Right</button>
+            <button class="contentButton">Top</button>
+            <button class="contentButton">Bottom</button>
+        </div>
+        <div class="animations">
+            <button class="contentButton">Rotate X</button>
+            <button class="contentButton">Rotate y</button>
+            <button class="contentButton">Rotate Z</button>
+            <button class="contentButton">Reset Rotation</button>
+        </div>
+    </div>
+    <div class="modelContent">
+        <canvas id="fantaCanvas"></canvas>
+        <div class="modelInfo">
+            <h1>History of Fanta</h1>
+            <h2>Creator: Max Keith</h2>
+            <div class="modelInfo">
+                <p>So let’s start this story at the beginning. Fanta traces its origins back to World War II. At the time, the Coca-Cola business in Germany was one of the world’s most successful, second only to the company’s sales in the United States. The modern version of Fanta. The Fanta we know now was born in Naples, Italy, where in 1955 Coca-Cola began using local citrus to formulate the now famous orange flavour.
+
+                    Bright, bubbly and popular, Fanta is the soft drink that intensifies fun. Introduced in 1940, Fanta is the second oldest brand of The Coca-Cola Company.</p>
+                <a class="contentButton" href="#">Find Out More</a>
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <p>&copy; Mobile Web 3D Applications</p>
+    <ul class="social">
+        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+        <li><a href=""><i class="fab fa-instagram-square"></i></a></li>
+        <li><a href=""><i class="fab fa-github-square"></i></a></li>
+    </ul>
+</footer>
+
+<script type="module" src="js/bundle.js"></script>
+</body>
+</html>

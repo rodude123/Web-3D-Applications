@@ -1,0 +1,412 @@
+@import url("normalize.css");
+
+:root {
+    --primaryDefault: hsla(0, 100%, 50%, 1);
+    --primaryHover: hsla(0, 100%, 40%, 1); 
+    --lightBackground: hsla(0, 0%, 100%, 0.55);
+    --mainBackground: hsla(0, 0%, 20%, 1);
+    --textColour: hsla(0, 100%, 100%, 1);
+    --subText: hsla(185, 65%, 53%, 1);
+}
+
+@font-face {
+    font-family: 'cocacola';
+    src: url("../assets/fonts/LOKICOLA.TTF");
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+
+body {
+    font-size: 1em;
+    font-family: Helvetica, sans-serif;
+}
+
+div.showPg {
+    display: block;
+    min-height: calc(100vh - 100px);
+}
+
+div.hidePg {
+    display: none;
+}
+
+/******** Navbar Content *********/
+
+.navbar {
+    width: 100%;
+    height: 60px;
+    background: var(--mainBackground);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.navbar > ul{
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li{
+    position: relative;
+}
+
+.navbar ul li a, .logo{
+    display: block;
+    color: #FFF;
+    height: 60px;
+    width: 180px;
+    text-align: center;
+    padding: 20px 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: all 0.2s ease;
+}
+
+.navbar ul > li a .brand{
+    margin-right: 1px;
+}
+
+.navbar ul > li:last-child a{
+    margin-right: 0;
+}
+
+.navbar ul li a .icon {
+    width: 25px;
+    display: inline-block;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.navLink.active,
+.navbar .dropdownMenu ul li a:hover,
+.navbar .dropdownMenu ul li a.active{
+    background: hsl(0, 100%, 48%);
+}
+
+.navbar .dropdownMenu{
+    position: absolute;
+    left: 0;
+    display: block;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s ease-out;
+}
+
+.navbar .dropdownMenu ul li a{
+    width: 180px;
+    background: var(--mainBackground);
+    text-align: left;
+    padding: 20px;
+}
+
+.navbar ul li a.navLink.active + .dropdownMenu{
+    max-height: 200px;
+    transition: max-height 0.5s ease-in;
+    overflow: visible;
+}
+
+.navbar .logo {
+    text-transform: unset;
+    width: auto;
+    padding: 10px 0;
+    font-size: 1.25em;
+}
+
+.navbar .logo .icon {
+    display: none;
+    color: var(--textColour);
+}
+
+.navbar .logo .brand {
+    color: var(--textColour);
+    font-family: 'cocacola', cursive;
+    font-size: 2.5rem;
+}
+
+/******** Header Content ********/
+
+.brandHeader {
+    background-image: url("../assets/images/main_3D.jpg");
+    height: 600px;
+    width: 90%;
+    margin: 1em auto;
+    background-position: top;
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.headerContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: auto auto auto 5em;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    background-color: var(--lightBackground);
+    padding: 1em;
+}
+
+.headerContent h1 {
+    margin: 0;
+}
+
+.headerContent h3 {
+    color: var(--subText);
+}
+
+/******** Drinks Section ********/
+
+.drinksContainer {
+    display: flex;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    max-width: 90%;
+    gap: 1em;
+}
+
+.card {
+    flex: 1;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 1em;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
+}
+
+.cardBody {
+    padding: 0.125em 1em;
+}
+
+/******** Footer Section *******/
+
+footer {
+    background-color: var(--mainBackground);
+    color: var(--textColour);
+    padding: 1.5em 3em;
+    margin-top: 1em;
+    display: flex;
+    gap: 1em;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+.social {
+    display: flex;
+    gap: 1em;
+}
+
+.social li a i {
+    color: var(--textColour);
+    font-size: 1.5em;
+}
+
+/** drinks pages **/
+
+#fanta canvas {
+    height: 100%;
+    border: 5px solid var(--primaryDefault);
+}
+
+#fanta {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.modelContent, .drinkContent {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.modelContent h2 {
+    margin-top: -0.5em;
+    color: var(--subText);
+}
+
+#fanta .contentButton {
+    background-color: var(--primaryDefault);
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+#fanta .contentButton:hover {
+    background-color: var(--primaryHover);
+}
+
+#fanta .gallery {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+.gallery .galleryItem img {
+    /*max-width: 30%;*/
+}
+
+.slideshowContainer .mySlides {
+    display: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.slideshowContainer {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+}
+
+.slideshowContainer .prev, .slideshowContainer .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.slideshowContainer .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+}
+
+.slideshowContainer .prev:hover, .slideshowContainer .next:hover {
+    background-color: var(--mainBackground);
+}
+
+.slideshowContainer .text {
+    background-color: var(--lightBackground);
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 50%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.slideshowContainer  .numberText {
+    color: var(--lightBackground);
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.slideshowContainer .active{
+    background-color: var(--mainBackground);
+}
+
+.slideshowContainer .fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+}
+
+/******** Media Queries *********/
+
+@media screen and (max-width: 48em) {
+    
+    body {
+        font-size: 0.8em;
+    }
+    
+    .navbar {
+        flex-direction: column;
+        justify-content: flex-start;
+        height: auto;
+    }
+    
+    .navbar > ul {
+        flex-direction: column;
+        justify-content: flex-start;
+        margin: 0 1em;
+        max-height: 0;
+        transition: max-height 0.5s ease-out;
+        overflow: hidden;
+    }
+    
+    .navbar ul.shown {
+        overflow: visible;
+        max-height: 1000px;
+        transition: max-height 0.5s ease-in;
+    }
+    
+    .navbar ul li a {
+        text-align: left;
+        margin-right: 1em;
+        width: 100%;
+    }
+    
+    .navbar .logo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 0 1em;
+    }
+    
+    .navbar .logo .icon {
+        display: block;
+    }
+    
+    .navbar .dropdownMenu {
+        position: relative;
+    }
+    
+    .dropdownMenu ul li a {
+        width: 100%;
+    }
+    
+    .brandHeader {
+        height: 300px;
+        width: 98%;
+    }
+    
+    .headerContent {
+        width: 100%;
+        margin: 0;
+    }
+}
