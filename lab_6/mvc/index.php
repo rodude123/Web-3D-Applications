@@ -1,12 +1,21 @@
 <?php
 use \Psr\Http\Message\ServerRequestInterface as Request;
 use \Psr\Http\Message\ResponseInterface as Response;
+use Slim\App;
 
 require '../../vendor/autoload.php';
 
 require_once "getData.php";
 
-$app = new \Slim\App;
+$app = new App;
+
+// middleware for setting content type globally to json
+$app->add(function($request, $response, $next) 
+{
+    $response = $next($request, $response);
+    return $response->withHeader('Content-Type', 'application/json');
+});
+
 $app->get('/homeDrinks', function (Request $request, Response $response, array $args)
 {
     $result = getHomeDrinksData();
@@ -15,6 +24,8 @@ $app->get('/homeDrinks', function (Request $request, Response $response, array $
         $response->getBody()->write($result);
         return $response->withStatus(500);
     }
+
+    $response->getBody()->write(json_encode($result));
     return $response;
 });
 
@@ -27,6 +38,7 @@ $app->get('/individualDrink/{drinkName}', function (Request $request, Response $
         $response->getBody()->write($result);
         return $response->withStatus(500);
     }
+    
     $response->getBody()->write(json_encode($result));
     return $response;
 });

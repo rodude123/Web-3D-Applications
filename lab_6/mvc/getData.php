@@ -29,7 +29,3 @@ function getIndividualDrinkData ($drinkName)
     $stmt->execute();
     return $stmt->fetchAll(PDO::FETCH_ASSOC); 
 }
-
-echo "hello world!!";
-
-var_dump(getHomeDrinksData());
