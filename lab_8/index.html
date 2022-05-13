@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coca-Cola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/ed3c25598e.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<nav class="navbar">
+    <div class="logo">
+            <span>
+                <a href="/" class="brand">1oca Cola</a> Journey
+            </span>
+        <a href="#" class="icon" id="burger"><i class="fa fa-bars"></i></a>
+    </div>
+    <ul id="navLinks">
+        <li><a href="#" class="navLink" id="homePg">Home</a></li>
+    <li><a href="#" class="navLink">Deeper Understanding</a></li>
+        <li><a href="#" class="navLink" id="drinksMenu">Drinks</a>
+            <div class="dropdownMenu">
+                <ul>
+                    <li><a href="#" id="cocaColaPg">Coca-Cola</a></li>
+                    <li><a href="#" id="fantaPg">fanta</a></li>
+                    <li><a href="#" id="costaPg">Costa</a></li>
+                </ul>
+            </div>
+        </li>
+        <li><a href="#" class="navLink">Contact</a></li>
+    </ul>
+</nav>
+<div id="home" class="showPg">
+    <header class="brandHeader">
+        <div class="headerContent">
+            <h1>Coca Cola Great Britain</h1>
+            <h3>Founded by Dr John S Pemberton</h3>
+            <p>The Coca Cola Company is the world's leading manufacturer, marketer and distributor of non-alcoholic
+                beverage
+                concentrates and syrups and produces nearly 400 brand.</p>
+        </div>
+    </header>
+    <main>
+        <div class="drinksContainer" id="homeDrinks">
+        </div>
+    </main>
+</div>
+<!-- drinks page -->
+<div id="drink" class="drinksPgs hidePg">
+    <main>
+        <div class="drinkContent">
+            <div class="slideshowContainer" id="slideshow">
+                <div>
+                    <!-- slide show content to generate -->     
+                </div>
+                <a class="prev" id="prevSlide">&#10094;</a>
+                <a class="next" id="nextSlide">&#10095;</a>
+            </div>
+            <div class="interactiveBtns">
+                <button class="contentButton" id="toggleWireframe">Toggle Wireframe</button>
+                <button class="contentButton" id="toggleLighting">Toggle Lighting</button>
+                <button class="contentButton" id="rotX">Rotate X</button>
+                <button class="contentButton" id="rotY">Rotate y</button>
+                <button class="contentButton" id="rotZ">Rotate Z</button>
+                <button class="contentButton" id="stopRot">Stop Rotation</button>
+            </div>
+        </div>
+        <div class="modelContent">
+            <canvas id="fantaCanvas"></canvas>
+            <div class="modelInfo" id="modelInfo">
+                <h1></h1>
+                <h2></h2>
+                <div class="drinkInfo">
+                    <p><!-- drinks information to generate --></p>
+                    <a class="contentButton" href="">Find Out More</a>
+                </div>
+            </div>
+        </div>
+    </main>
+</div>
+<footer>
+    <p>&copy; Web 3D Applications</p>
+    <ul class="social">
+        <li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+        <li><a href=""><i class="fab fa-twitter-square"></i></a></li>
+        <li><a href=""><i class="fab fa-instagram-square"></i></a></li>
+        <li><a href=""><i class="fab fa-github-square"></i></a></li>
+    </ul>
+</footer>
+
+<script type="module" src="js/bundle.js"></script>
+</body>
+</html>
